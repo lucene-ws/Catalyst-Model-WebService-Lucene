@@ -35,9 +35,9 @@ Creates a new instance of a WebService::Lucene object.
 =cut
 
 sub new {
-	my ( $class, $c, $options ) = @_;
+	my( $class, $c, $config ) = @_;
 
-	return $class->WebService::Lucene::new( $class->config->{ server } );
+	return $class->WebService::Lucene::new( $class->NEXT::new( $c, $config )->{ server } );
 
 }
 
