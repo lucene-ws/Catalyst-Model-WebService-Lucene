@@ -1,6 +1,6 @@
 package Catalyst::Model::WebService::Lucene;
 
-use base qw( Catalyst::Model WebService::Lucene );
+use base qw( WebService::Lucene );
 
 use strict;
 
@@ -28,17 +28,15 @@ Catalyst application.
 
 =head1 METHODS
 
-=head2 new( )
+=head2 COMPONENT( )
 
-Creates a new instance of a WebService::Lucene object.
+passes your config options to L<WebService::Lucene>'s C<new> method.
 
 =cut
 
-sub new {
-	my( $class, $c, $config ) = @_;
-
-	return $class->WebService::Lucene::new( $class->NEXT::new( $c, $config )->{ server } );
-
+sub COMPONENT {
+    my( $class, $c, $config ) = @_;
+    return $class->new( $config->{ server } );
 }
 
 =head1 SEE ALSO
