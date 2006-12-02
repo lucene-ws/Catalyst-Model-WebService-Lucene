@@ -9,7 +9,7 @@ my $build = Module::Build->new(
 	create_readme      => 1,
 	create_makefile_pl => 'traditional',
 	requires           => {
-		'Catalyst'           => 5.6,
+		'Catalyst'           => 5.7001,
 		'WebService::Lucene' => 0,
 	},
 	build_requres      => {
@@ -18,3 +18,4 @@ my $build = Module::Build->new(
 );
 
 $build->create_build_script;
+
