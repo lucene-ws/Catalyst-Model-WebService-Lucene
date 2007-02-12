@@ -1,6 +1,6 @@
 package Catalyst::Model::WebService::Lucene;
 
-use base qw( WebService::Lucene );
+use base qw( WebService::Lucene Catalyst::Model );
 
 use strict;
 
@@ -36,7 +36,13 @@ passes your config options to L<WebService::Lucene>'s C<new> method.
 
 sub COMPONENT {
     my( $class, $c, $config ) = @_;
-    return $class->new( $config->{ server } );
+    my $self = $class->new( $config->{ server } );
+
+    $self->config(
+        $self->merge_config_hashes( $self->config, $config )
+    );
+
+    return $self;
 }
 
 =head1 SEE ALSO
