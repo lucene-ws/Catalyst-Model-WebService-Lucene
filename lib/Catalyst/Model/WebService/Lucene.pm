@@ -4,7 +4,7 @@ use base qw( WebService::Lucene Catalyst::Model );
 
 use strict;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
