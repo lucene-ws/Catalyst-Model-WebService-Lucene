@@ -8,8 +8,7 @@ our $VERSION = '0.03';
 
 =head1 NAME
 
-Catalyst::Model::WebService::Lucene - Use WebService::Lucene in your Catalyst
-application
+Catalyst::Model::WebService::Lucene - Use WebService::Lucene in your Catalyst application
 
 =head1 SYNOPSIS
 
