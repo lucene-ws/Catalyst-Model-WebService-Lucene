@@ -1,5 +1,9 @@
 Revision history for Perl extension Catalyst::Model::WebService::Lucene
 
+0.03  Fri Oct 26 2007
+    - switch to Module::Install
+    - minor pod updates
+
 0.02  Tue Apr 17 2007
     - released to CPAN
 

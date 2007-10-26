@@ -4,7 +4,7 @@ use base qw( WebService::Lucene Catalyst::Model );
 
 use strict;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
@@ -35,12 +35,10 @@ passes your config options to L<WebService::Lucene>'s C<new> method.
 =cut
 
 sub COMPONENT {
-    my( $class, $c, $config ) = @_;
+    my ( $class, $c, $config ) = @_;
     my $self = $class->new( $config->{ server } );
 
-    $self->config(
-        $self->merge_config_hashes( $self->config, $config )
-    );
+    $self->config( $self->merge_config_hashes( $self->config, $config ) );
 
     return $self;
 }
@@ -57,17 +55,13 @@ sub COMPONENT {
 
 =head1 AUTHORS
 
-=over 4
+Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
-=item * Brian Cassidy E<lt>brian.cassidy@nald.caE<gt>
-
-=item * Adam Paynter E<lt>adam.paynter@nald.caE<gt>
-
-=back
+Adam Paynter E<lt>adapay@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2006 National Adult Literacy Database
+Copyright 2007 National Adult Literacy Database
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 

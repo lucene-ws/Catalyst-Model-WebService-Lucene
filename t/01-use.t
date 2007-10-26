@@ -4,6 +4,6 @@ use strict;
 use warnings;
 
 BEGIN {
-	use_ok( 'Catalyst::Model::WebService::Lucene' );
+    use_ok( 'Catalyst::Model::WebService::Lucene' );
 }
 
