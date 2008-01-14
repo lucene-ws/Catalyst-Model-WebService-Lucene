@@ -3,8 +3,9 @@ package Catalyst::Model::WebService::Lucene;
 use base qw( WebService::Lucene Catalyst::Model );
 
 use strict;
+use warnings;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 NAME
 
@@ -60,7 +61,7 @@ Adam Paynter E<lt>adapay@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2007 National Adult Literacy Database
+Copyright 2008 National Adult Literacy Database
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
